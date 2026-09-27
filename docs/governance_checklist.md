@@ -10,8 +10,10 @@
 
 ## 2. Privacy and PII handling
 
-- **Faces and license plates:** Review the 131 exported photographs before a public Release and record whether any identifiable face, plate, or client/site identifier is visible. **Status: not yet confirmed.**
-- **Action if found:** Remove or blur the affected images and generate a new Roboflow version and ZIP, or establish permission to publish. Train and document the exact version ultimately released.
+- **Faces and license plates:** A contact-sheet review of all 131 exported images and full-size checks of selected photos on 27 September 2026 found people in several street/site scenes and a readable passenger-car registration in a training photograph (`20221128_07_06_57...rf.6bfe2245...jpg`). A visual scan does not establish whether every person can be identified, and **the frozen version 3 images were not blurred**. Do not state that this dataset contains no personal details.
+- **Consent and permission:** The source projects display CC BY 4.0 and are attributed; this does not independently establish a photographed person's consent or permission to disclose private site details. Do not assert that such consent exists without evidence.
+- **Data minimization:** Use only the site photographs and target/negative labels needed for this two-class experiment. No names, hire records, personnel identifiers, or precise site locations are required by the detector. Remove or obscure incidental identifiable details if any are found.
+- **Protection and follow-up:** The current public Release reproduces the data actually used in the reported experiment; it has not been privacy-sanitized. Do not add private client photographs or use the dataset as an operational image store. Before further redistribution or production use, review full-resolution images for identifiable people, plates, and site details, remove or blur affected images where permission is absent, and create a new version. If the released training ZIP changes, retrain or clearly distinguish the new public data from the data used for the reported weights; update its SHA256, Release asset, notebooks, and documentation. The existing Release should not be described as anonymized.
 - **Secrets:** The notebook's main data path must work without credentials. No API keys may appear in code, output, or Git history.
 
 ## 3. Risk statement
