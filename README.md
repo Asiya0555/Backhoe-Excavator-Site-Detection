@@ -47,9 +47,13 @@ If Colab blocks GPU access, use **[03_BHL_EXC_CPU_Verification.ipynb](notebooks/
 
 **Run proof (27 September 2026):** The inference notebook completed a fresh CPU Colab **Run all** without credentials. The original training run completed 30 epochs on a Tesla T4 in about 2 minutes of training time. When Colab later restricted GPU access, the [CPU verification notebook](notebooks/03_BHL_EXC_CPU_Verification.ipynb) completed a fresh **Run all** on an Intel Xeon CPU at 2.20 GHz with `ultralytics==8.4.163`: five verification epochs took **7.2 minutes**, and the notebook took **7.4 minutes after installation** (completed 27 September 2026 at 17:39 UTC). It then loaded the separately released 30-epoch `best.pt`, evaluated all 13 held-out test images, and reproduced precision **0.812**, recall **0.904**, mAP50 **0.938**, and mAP50–95 **0.677**. The five-epoch validation scores are only a pipeline check and are not the reported model results.
 
+As a planning estimate, allow roughly **10–20 minutes** for the CPU verification notebook including installation and downloads; Colab and network speeds vary. The original T4 training time above is the training step, not a guaranteed whole-notebook runtime.
+
 ## Method and data
 
 Roboflow version 3 contains **105 training, 13 validation, and 13 test images**, including 11 negative images across those splits. Two detection classes are defined: `0 = Backhoe Loader` and `1 = excavator`. Background is an evaluation category, not a third dataset class. Related views were kept together where identified.
+
+This is approximately an **80/20 train/evaluation split**: 105 of 131 images (80.2%) are for training; the remaining 26 (19.8%) are divided into 13 validation and 13 held-out test images. The two classes use a box around each identifiable whole machine. A backhoe loader has a front bucket and rear digging arm; an excavator has a boom and upper body without that front-loader/rear-backhoe arrangement. Ambiguous partial views are reviewed rather than guessed from a bucket alone, and photos with neither target remain unboxed negatives. See the [full class and labeling rules](docs/class_definitions.md).
 
 The [class and labeling rules](docs/class_definitions.md) explain how to distinguish the machines, handle partial views, and keep genuine negative photos. The [annotation workflow](docs/annotation_workflow.md) records the SAM-assisted review and its limits.
 
@@ -73,6 +77,7 @@ The short PDF pack presents the project in two formats: [seven-slide presentatio
 | [`results/`](results/README.md) | Curves, confusion matrix, success and failure examples |
 | [`docs/governance_checklist.md`](docs/governance_checklist.md) | Provenance, privacy, risk and human review |
 | [`docs/class_definitions.md`](docs/class_definitions.md) | Classes, whole-object boxes, and negatives |
+| [`docs/problem.md`](docs/problem.md) | AECO problem, evaluation goal, and scope |
 | [`docs/annotation_workflow.md`](docs/annotation_workflow.md) | Dataset curation, SAM exploration, and export choices |
 | [`docs/error_analysis.md`](docs/error_analysis.md) | Three false detections, three misses, and data improvements |
 | [`reports/`](reports/) | Presentation and mini report PDFs |

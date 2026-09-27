@@ -36,9 +36,11 @@ Training box loss fell overall and validation mAP rose across the 30-epoch run; 
 
 ## Complete evidence files
 
-- [Four training annotation examples](annotation_examples.png): two backhoe-loader and two excavator ground-truth examples.
-- [Ten fixed validation predictions](validation_predictions_grid.png): eight labeled and two negative photos, selected in filename order.
+- [Four training annotation examples](evidence/annotation_examples_4.png): two backhoe-loader and two excavator ground-truth examples.
+- [Ten fixed validation predictions](evidence/validation_predictions_10.png): eight labeled and two negative photos, selected in filename order.
 - [All 13 held-out test predictions](test_predictions_grid.png): labels and predictions together, including the negative photo.
-- [Five-photo test inference demonstration](five_test_predictions.png): two backhoe loaders, two excavators, and one negative tractor.
+- [Five-photo inference demonstration](evidence/five_heldout_predictions.png): two backhoe loaders, two excavators, and one negative tractor. These are **held-out test photos**, unseen in training, not five independently sourced external photos.
 - [Orientation comparison](orientation_comparison.png): the sideways backhoe as exported and after rotation.
 - [Source credits and dataset details](../README.md#license-and-image-credit).
+
+The three evidence sheets linked above are copies of the saved notebook figures collected in `/results/evidence/` so the requested annotation, validation, and five-photo inference examples can be opened from one folder. The individual success and failure panels in that folder are crops of the same saved prediction grids.
