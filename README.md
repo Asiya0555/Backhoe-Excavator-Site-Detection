@@ -12,7 +12,13 @@ The model detects both target classes in held-out photos. On the **13-image test
 |---:|---:|---:|---:|
 | 0.812 | 0.904 | 0.938 | 0.677 |
 
-![Five held-out predictions, including successes and known errors](results/five_test_predictions.png)
+### Three successful detections
+
+Each image below is an isolated panel from the saved held-out test prediction grid. Select a thumbnail to see its box and confidence score at full size.
+
+| 1. Rear-view backhoe loader · 0.85 | 2. Backhoe loader at site · 0.88 | 3. Site excavator · 0.86 |
+|---|---|---|
+| <a href="results/evidence/success_01_backhoe_rear.png"><img src="results/evidence/success_01_backhoe_rear.png" width="230" alt="Rear-view backhoe loader detected at 0.85"></a> | <a href="results/evidence/success_02_backhoe_site.png"><img src="results/evidence/success_02_backhoe_site.png" width="230" alt="Partly framed backhoe loader detected at 0.88"></a> | <a href="results/evidence/success_03_excavator_site.png"><img src="results/evidence/success_03_excavator_site.png" width="230" alt="Excavator at site detected at 0.86"></a> |
 
 **[See the annotated examples, training curves, confusion matrix, and failure analysis](results/README.md).** This small test set supports a proof of concept, not a general performance guarantee.
 
