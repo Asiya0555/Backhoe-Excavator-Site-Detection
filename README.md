@@ -10,7 +10,7 @@ The model detects both target classes in held-out photos. On the **13-image test
 |-:|-:|-:|-:|
 |0.812|0.904|0.938|0.677|
 
-!\[Five held-out predictions, including successes and known errors](results/five\_test\_predictions.png)
+![Five held-out predictions, including successes and known errors](results/five_test_predictions.png)
 
 [**See the annotated examples, training curves, confusion matrix, and failure analysis**](results/README.md)**.** This small test set supports a proof of concept, not a general performance guarantee.
 
@@ -18,11 +18,11 @@ The model detects both target classes in held-out photos. On the **13-image test
 
 [**Open 02\_BHL\_EXC\_Object\_Detection\_Inference.ipynb**](notebooks/02_BHL_EXC_Object_Detection_Inference.ipynb) and choose **Runtime → Run all**. The notebook downloads the released model and fixed example photos, then displays predictions. It runs on a CPU without a local installation or credentials.
 
-[!\[Open inference notebook](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Asiya0555/Backhoe-Excavator-Site-Detection/blob/main/notebooks/02_BHL_EXC_Object_Detection_Inference.ipynb)
+[![Open inference notebook](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Asiya0555/Backhoe-Excavator-Site-Detection/blob/main/notebooks/02_BHL_EXC_Object_Detection_Inference.ipynb)
 
 To reproduce training and evaluation, run [**01\_BHL\_EXC\_Object\_Detection\_Training.ipynb**](notebooks/01_BHL_EXC_Object_Detection_Training.ipynb) in Colab. It verifies the frozen dataset, fine-tunes a pretrained YOLO26n model, evaluates held-out photographs, and examines errors. A GPU speeds up training, but the notebook also supports a CPU runtime.
 
-[!\[Open training notebook](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Asiya0555/Backhoe-Excavator-Site-Detection/blob/main/notebooks/01_BHL_EXC_Object_Detection_Training.ipynb)
+[![Open training notebook](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Asiya0555/Backhoe-Excavator-Site-Detection/blob/main/notebooks/01_BHL_EXC_Object_Detection_Training.ipynb)
 
 ## Method and data
 
