@@ -2,6 +2,8 @@
 
 These figures come from the executed training notebook and frozen Roboflow version 3 export. The two trained classes are `Backhoe Loader` and `excavator`. Each thumbnail below isolates an **existing saved prediction panel**; no new model run or altered score was used to make this gallery. Select a thumbnail to see the full-size panel.
 
+The [evidence index](evidence/README.md) groups annotation and prediction grids, individual success and failure panels, and SAM workflow screenshots.
+
 ## Held-out test results
 
 The test split contains 13 images and 12 labeled target objects.
